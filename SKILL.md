@@ -336,7 +336,7 @@ skills/clock-in-assistant/
 └── references/             # 参考文档目录
     ├── agent-config-guide.md       # 智能体配置文件指南
     ├── local-llm-guide.md    # 本地模型配置指南
-    └── cloud-llm-guide.md     # 云模型配置指南
+    └── cloud-llm-guide.md     # 云端模型配置指南
 ```
 
 ---

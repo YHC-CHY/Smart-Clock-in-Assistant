@@ -130,9 +130,9 @@ skills/clock-in-assistant/
 │   ├── ocr_service.py    # OCR 服务封装
 │   └── feishu_api.py     # 飞书 API 封装
 └── references/           # 参考文档
-    ├── local-llm-guide.md       # 本地大模型配置指南
     ├── agent-config-guide.md       # 智能体配置文件指南
-    └── cloud-llm-guide.md # 云端大模型配置指南
+    ├── local-llm-guide.md       # 本地模型配置指南
+    └── cloud-llm-guide.md # 云端模型配置指南
 ```
 
 ## 🔧 配置检查清单
