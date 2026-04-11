@@ -1,0 +1,77 @@
+{
+    "version": "1.0.0",
+    "name": "clock-in-assistant-config",
+    "description": "Clock-in Assistant 配置文件",
+    "ocr": {
+        "enabled": true,
+        "provider": "ollama",
+        "base_url": "http://localhost:11434",
+        "model": "your-model-name",
+        "timeout": 60,
+        "max_retries": 3
+    },
+    "keywords": {
+        "trigger_words": [
+            "打卡",
+            "签到"
+        ],
+        "case_sensitive": false
+    },
+    "image": {
+        "save_path": "C:\\Users\\YourUsername\\Desktop\\image-download-path",
+        "supported_formats": [
+            "jpg",
+            "jpeg",
+            "png",
+            "gif",
+            "bmp"
+        ],
+        "max_size_mb": 10
+    },
+    "feishu": {
+        "enabled": true,
+        "app_id": "cli_xxxxxxxxxxxxxxxx",
+        "app_secret": "your_app_secret_here",
+        "bitable": {
+            "app_token": "your_bitable_app_token",
+            "table_id": "tblxxxxxxxxxxxx",
+            "view_id": ""
+        },
+        "field_mapping": {
+            "clock_in_time": "打卡时间",
+            "clock_in_image": "打卡拍照",
+            "month": "月度",
+            "employee_name": "打卡人",
+            "department": "打卡部门",
+            "entry_exit_type": "进/出场及打卡分类",
+            "project_name": "打卡项目名称",
+            "notes": "其他事项打卡备注",
+            "clock_in_location": "打卡地点"
+        },
+        "field_settings": {
+            "clock_in_time": {
+                "format": "YYYY/MM/DD HH:mm",
+                "default_to_current_time": true
+            },
+            "month": {
+                "format": "YYYY-MM",
+                "derived_from": "clock_in_time"
+            },
+            "entry_exit_type": {
+                "enabled": false,
+                "default_value": ""
+            },
+            "notes": {
+                "exclude_fields": [
+                    "clock_in_time",
+                    "project_name"
+                ]
+            }
+        }
+    },
+    "notification": {
+        "success_message": "✅ 打卡信息已成功录入！",
+        "error_message": "❌ 打卡信息录入失败，请重试。",
+        "enable_notification": true
+    }
+}
