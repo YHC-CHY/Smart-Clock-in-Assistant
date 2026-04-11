@@ -2,7 +2,7 @@
 
 ## 📋 项目简介
 
-Clock-in Assistant 是一个基于飞书和 Ollama 本地大模型的自动化打卡工具，用于施工项目的打卡管理。当用户在飞书群聊中上传打卡图片并@机器人时，系统会自动处理图片、识别信息并写入飞书多维表格。
+Clock-in Assistant 是一个基于飞书 和 Ollama 本地大模型的自动化打卡工具，用于打卡管理。当用户在飞书群聊中上传打卡图片并@机器人时，系统会自动处理图片、识别信息并写入飞书多维表格。
 
 ### 核心功能
 
@@ -172,8 +172,9 @@ A: 检查：
 
 ## 📖 参考文档
 
-- [详细使用教程](references/local-llm-guide.md)
+- [本地大模型配置指南](references/local-llm-guide.md)
 - [云端大模型配置指南](references/cloud-llm-guide.md)
+- [智能体配置文件指南](references/agent-config-guide.md)
 
 ## 🤝 贡献
 
