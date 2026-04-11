@@ -36,7 +36,7 @@ def ensure_image_directory(save_path: str) -> Path:
     return path
 
 
-def download_image(image_url: str, save_path: str, access_token: str = None, user_name: str = None) -> str:
+def download_image(image_url: str, save_path: str, access_token: Optional[str] = None, user_name: Optional[str] = None) -> str:
     """
     下载图片到本地
     

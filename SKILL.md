@@ -1,6 +1,6 @@
 ---
 name: clock-in-assistant
-description: 帮助管理者自动化管理员工打卡信息的录入。当用户在飞书群聊中上传打卡图片、发送打卡关键词并@机器人时触发。自动下载图片、通过本地Ollama大模型识别文字、将打卡人信息、所属部门及图片写入飞书多维表格。
+description: 帮助管理者自动化管理员工打卡信息的录入。当用户在飞书群聊中上传打卡图片、发送打卡关键词并@机器人时触发。自动下载图片、通过大模型识别文字、将打卡人信息、所属部门及图片写入飞书多维表格。
 metadata:
   copaw:
     emoji: "⏰"
@@ -336,7 +336,8 @@ skills/clock-in-assistant/
 └── references/             # 参考文档目录
     ├── agent-config-guide.md       # 智能体配置文件指南
     ├── local-llm-guide.md    # 本地模型配置指南
-    └── cloud-llm-guide.md     # 云端模型配置指南
+    ├── cloud-llm-guide.md     # 云端模型配置指南
+    └── table-schema-change-guide.md  # 数据表格式修改指南
 ```
 
 ---

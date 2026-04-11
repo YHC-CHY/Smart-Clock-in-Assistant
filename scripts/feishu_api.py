@@ -290,7 +290,7 @@ def prepare_record_data(
     user_name: str,
     user_department: str,
     image_file_token: Optional[str] = None,
-    field_mapping: Dict[str, str] = None
+    field_mapping: Optional[Dict[str, str]] = None
 ) -> Dict[str, Any]:
     """
     准备要写入多维表格的记录数据

@@ -138,7 +138,8 @@ skills/clock-in-assistant/
 └── references/           # 参考文档
     ├── agent-config-guide.md       # 智能体配置文件指南
     ├── local-llm-guide.md       # 本地模型配置指南
-    └── cloud-llm-guide.md # 云端模型配置指南
+    ├── cloud-llm-guide.md # 云端模型配置指南
+    └── table-schema-change-guide.md  # 数据表格式修改指南
 ```
 
 ## 🔧 配置检查清单
@@ -175,12 +176,16 @@ A: 检查：
 4. Ollama 服务是否运行
 5. 确保Agent在处理打卡任务时，正确调用了本Skill，Agent可能会自行使用其他工具处理打卡任务，可在Agent的profile.md或者memory.md中进行强制限制。
 
+**Q: 需要调整飞书多维表格的字段或格式？**
+A: 请参考 [数据表格式修改指南](references/table-schema-change-guide.md) 文档。
+
 
 ## 📖 参考文档
 
 - [本地大模型配置指南](references/local-llm-guide.md)
 - [云端大模型配置指南](references/cloud-llm-guide.md)
 - [智能体配置文件指南](references/agent-config-guide.md)
+- [数据表格式修改指南](references/table-schema-change-guide.md)
 
 ## 🤝 贡献
 
