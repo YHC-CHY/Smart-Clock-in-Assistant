@@ -99,7 +99,7 @@ python skills/clock-in-assistant/scripts/clock_in.py \
 
 ### 4. 错误处理
 - 如果脚本执行失败，提取错误信息
-- 按照格式 "@{user_name}，❌ 打卡失败！失败原因！" 发送错误信息
+- 按照格式 "<at user_id=\"ou_123456\"></at>，❌ 打卡失败！失败原因！" 发送错误信息
 - **不添加任何额外信息！**
 
 ````
@@ -190,12 +190,12 @@ python skills/clock-in-assistant/scripts/clock_in.py \
 
 **成功：**
 ```text
-<at user_id="ou_xxx"></at>，✅ 打卡成功！
+<at user_id=\"ou_xxx\"></at>，✅ 打卡成功！
 ```
 
 **失败：**
 ```text
-<at user_id="ou_xxx"></at>，❌ 打卡失败！失败原因！
+<at user_id=\"ou_xxx\"></at>，❌ 打卡失败！失败原因！
 ```
 
 ### ❌ 禁止事项
@@ -203,6 +203,7 @@ python skills/clock-in-assistant/scripts/clock_in.py \
 - 使用除 `clock-in-assistant` 外的任何其他Skill
 - 输出任何解释性说明、日志信息
 - 使用普通 `@` 符号（飞书不会识别）
+- 输出任何与输出格式无关的话
 
 ### 🔧 技术细节
 
@@ -216,7 +217,7 @@ python skills/clock-in-assistant/scripts/clock_in.py \
 ```
 
 **飞书客户端转换：**
-- 脚本输出：`<at user_id="ou_xxx"></at>`
+- 脚本输出：`<at user_id=\"ou_xxx\"></at>`
 - 用户看到：`@用户`（自动转换）
 
 ---
@@ -304,7 +305,7 @@ python skills/clock-in-assistant/scripts/clock_in.py \
 - 配置文件中的格式要求不明确
 
 **解决方案**：
-1. 确保使用 `<at user_id="..."></at>` 格式
+1. 确保使用 `<at user_id=\"...\"></at>` 格式
 2. 检查是否正确从上下文中获取了 user_id
 3. 在配置文件中明确格式要求
 
